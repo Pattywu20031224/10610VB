@@ -6,7 +6,7 @@
             game_intro.Visible = False
             Button1.Visible = False
             Button2.Visible = False
-            ProgressBar1.Visible = False
+            'ProgressBar1.Visible = False
         End If
 
         '我方飛機移動
@@ -85,13 +85,19 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         StartGame = True
+        Button1.Enabled = False
+        Button1.Visible = False
+        game_intro.Visible = False
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         game_intro.Visible = True
+        Button2.Enabled = False
+        Button2.Visible = False
     End Sub
 
     Private Sub ProgressBar1_Click(sender As Object, e As EventArgs) Handles ProgressBar1.Click
         ProgressBar1.Visible = True
     End Sub
+
 End Class
